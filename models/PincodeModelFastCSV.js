@@ -4,7 +4,7 @@ const fs = require('fs'),
     logger = require('../util/log4js.js');
     var FileReader = require('../util/FileReader.js');
 var PropertiesReader = require('properties-reader');
-var prop = PropertiesReader('../location-api/resource.properties');
+var prop = PropertiesReader('./resource.properties');
 var readerFilePath = prop.get('file.dir')+path.sep+prop.get('pincode.filename').toString();
 exports.getPincode = (pincode, cb)=>{
     let fileReader = new FileReader(readerFilePath);
