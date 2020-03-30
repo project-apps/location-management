@@ -1,0 +1,5 @@
+---
+applications:
+ - name: location-management
+   random-route: true
+   memory: 128M

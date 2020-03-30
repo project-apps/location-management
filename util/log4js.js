@@ -4,7 +4,6 @@ var PropertiesReader = require('properties-reader');
 var prop = PropertiesReader('./resource.properties');
 //var prop = PropertiesReader('../resource.properties');// for local run
 var logPath = prop.get('log.path')+path.sep;
-//var logPath = '/home/rajan/Stuffs/Project/npp-apps/logs/'
 log4js.configure({
     appenders: {
         out: { type: 'console' },
@@ -26,27 +25,27 @@ var logger_info = log4js.getLogger('info');//for data flows trace.
 var logger_error = log4js.getLogger('error');// for all type of errors, warn and fatal.
 var console_logger = log4js.getLogger('out');
 
-exports.debugLogger =  (data)=>{
+exports.debug =  (data)=>{
     logger_debug.debug(data);
     console_logger.trace(data);
 }
-exports.infoLogger = (data)=>{
+exports.info = (data)=>{
     logger_info.info(data);
     console_logger.trace(data);
 }
-exports.warnLogger = (data)=>{
+exports.warn = (data)=>{
     logger_error.warn(data);
     console_logger.trace(data);
 }
-exports.errorLogger = (data)=>{
+exports.error = (data)=>{
     logger_error.error(data);
     console_logger.error(data);
 }
-exports.fatalLogger = (data)=>{
+exports.fatal = (data)=>{
     logger_error.fatal(data);
     console_logger.trace(data);
 }
-exports.consoleLogger = (data)=>{
+exports.console = (data)=>{
     console_logger.info(data);
 }
 /**
