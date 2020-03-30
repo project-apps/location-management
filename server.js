@@ -1,6 +1,7 @@
 const webServer = require('./config/webserver.js'),
   dbconfig = require('./config/dbconfig.js')
   logger = require('./util/log4js.js');
+
 async function startup(){
 try{
     logger.debug('Starting application.');
