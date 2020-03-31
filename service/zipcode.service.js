@@ -10,6 +10,8 @@ exports.findOne = (req_param, cb)=>{
       }
       if(result){
       return cb(null, result);
+      }else {
+        return cb(null, '{}');
       }
     });
   });
