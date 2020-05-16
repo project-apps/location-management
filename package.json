@@ -1,14 +1,14 @@
 {
   "name": "location-management",
   "version": "1.0.0",
-  "description": "location based api",
-  "main": "server.js",
+  "description": "Location serices",
+  "main": "index.js",
   "private": false,
   "engines": {
     "node": "10.*"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
