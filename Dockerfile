@@ -2,7 +2,7 @@ FROM node:6-alpine
 
 ADD views /location-management/views
 ADD package.json /location-management
-ADD server.js /location-management
+ADD index.js /location-management
 
 RUN cd /location-management; npm install
 

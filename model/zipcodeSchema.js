@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var zipcodeSchema = new mongoose.Schema({
+const zipcodeSchema = new mongoose.Schema({
   officename:{
     type: String
   },
@@ -12,7 +12,7 @@ var zipcodeSchema = new mongoose.Schema({
     type: String
   },
 
-  Deliverystatus:{
+  deliverystatus:{
     type: String
   },
 
@@ -28,11 +28,11 @@ var zipcodeSchema = new mongoose.Schema({
     type: String
   },
 
-  Taluk:{
+  taluk:{
     type: String
   },
 
-  Districtname:{
+  districtname:{
     type: String
   },
 
@@ -44,11 +44,11 @@ var zipcodeSchema = new mongoose.Schema({
     type: String
   },
 
-  Related_Suboffice:{
+  relatedSuboffice:{
     type: String
   },
 
-  Related_Headoffice:{
+  relatedHeadoffice:{
     type: String
   },
 

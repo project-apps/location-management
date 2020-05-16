@@ -1,5 +1,4 @@
-const zipcodeSchema = require('../model/zipcode.schema.js'),
-  zipcodeService = require('../service/zipcode.service.js'),
+const zipcodeService = require('../service/zipcode.service.js'),
   logger = require('../util/log4js.js');
 exports.findOne = (req, res) => {
   let zipcode = req.params.pincode;
@@ -49,3 +48,11 @@ exports.findAll = (req, res) => {
     });
   });
 };
+
+exports.getZipcodeObj = (req, res)=>{
+  let zipcode = req.params.pincode;
+  let req_param = {'pincode': zipcode};
+  zipcodeService.getZipcodeObj(req_param, (err, obj)=>{
+    res.send(obj);
+  })
+}
